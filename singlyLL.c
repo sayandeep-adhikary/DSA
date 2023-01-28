@@ -108,6 +108,19 @@ void deleteFromEnd(){
     printf("%d is deleted from List\n\n", curr->data);
     free(curr);
 }
+void reverse(){
+    struct Node* prev = NULL;
+    struct Node* curr = head;
+    struct Node* forward = NULL;
+    while(curr != NULL){
+        forward = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = forward;
+    }
+    head = prev;
+    return;
+}
 void display(){
     struct Node* temp = head;
     printf("The List is : ");
@@ -122,15 +135,16 @@ int main()
 {
     int ch;
     while(1){
-        printf("Enter your choice :\n");
+        printf("\nEnter your choice :\n\n");
         printf("1 to INSERT AT BEGINNING    ");
         printf("2 to INSERT AT GIVEN POSITION    ");
         printf("3 to INSERT AT END\n\n");
         printf("4 to DELETE FROM BEGINNING    ");
         printf("5 to DELETE FROM GIVEN POSITION    ");
         printf("6 to DELETE FROM END    ");
-        printf("7 to DISPLAY    ");
-        printf("8 to EXIT\n");
+        printf("7 to DISPLAY    \n\n");
+        printf("8 to REVERSE THE LINKED LIST    ");
+        printf("9 to EXIT\n");
         printf("\n");
         scanf("%d", &ch);
         printf("\n");
@@ -158,6 +172,9 @@ int main()
             display();
             break;
         case 8:
+            reverse();
+            break;
+        case 9:
             printf("Program Ended ! ");
             exit(1);
         default:
