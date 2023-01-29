@@ -3,3 +3,6 @@
 /linQueue.exe
 /stack.exe
 /singlyLL.exe
+/insertionSort.c
+/selectionSort.c
+/bubbleSort.c
