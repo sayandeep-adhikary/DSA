@@ -101,16 +101,18 @@ int main()
         printf("Press 6 to EXIT\n\n");
         printf("Enter your choice : ");
         scanf("%d", &ch);
+        printf("\n");
         int n, i, h;
         switch (ch)
         {
         case 1:
             printf("Enter the no of Nodes : ");
             scanf("%d", &n);
+            printf("\n");
             i = 1;
+            printf("Enter The Elements : ");
             while(i<=n){
                 int data;
-                printf("Enter Data: ");
                 scanf("%d", &data);
                 createBST(data);
                 i++;
