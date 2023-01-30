@@ -49,8 +49,7 @@ void createBST(int data){
                 }
             }
         }
-    }
-    
+    }  
 }
 void inorder(struct Node * root){
     if(root == NULL){
